@@ -1,0 +1,14 @@
+
+<% @current_friends.each do |u| %>
+<div class="span5 navbar-inner">
+<%= link_to u.user.email , {:action => "show", :controller => "users", :id => u.user_id } %>
+<div class="pull-right">
+<%= link_to '[Remove]', friendlist_path(:id => u.user_id), :method => :delete, :confirm => 'Are you sure?' %><br>
+</div>
+</div>
+
+<% end %>
+
+
+
+
